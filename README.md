@@ -8,6 +8,9 @@ the validation of a user's credentials.
 
 Who knows, might be useful one day.
 
+/status - get status of the service.
+/ping - ping the service.
+
 ## License
 
 Copyright © 2012 Matthew Daley
