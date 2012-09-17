@@ -7,13 +7,21 @@
   (:require [compojure.route :as route]
             [compojure.handler :as handler]))
 
+(def service-name "credentials")
+
+(defn service-version []
+  "0.0.1")
+
+(defn service-status []
+  (str true))
+
 (defn ping []
   {:status 200
    :headers {"content-type" "text/plain;charset=utf-8"}})
 
 (defn status-json []
   {:status 200
-   :body "status-json"
+   :body (json-str {:serviceName service-name :version (service-version) :status (service-status)})
    :headers {"content-type" "application/json;charset=utf-8"}})
 
 (defn status-xml []
@@ -31,7 +39,7 @@
    :body (json-str {"status" 404 "message" "notfound"})})
 
 (defroutes myroutes
-  (GET "/status" {params :query-params} (status (credentials.utils/lower-map params)))
+  (GET "/status" {params :query-params} (status (lower-map params)))
   (GET "/ping" [] (ping))
   (GET "/test" {params :params} (pr-str (params)))
   (route/not-found (notfound)))
