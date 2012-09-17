@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c8b72f2-8f1e-4d20-8368-add047aec0a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/credentials/roleSchema.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/credentials/utils_test.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/credentials/roleSchema_test.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/credentials/web.clj" afterPath="$PROJECT_DIR$/src/credentials/web.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/credentials/core_test.clj" afterPath="$PROJECT_DIR$/test/credentials/core_test.clj" />
     </list>
     <ignored path="credentials.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +64,7 @@
       <file leaf-file-name="core_test.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/credentials/core_test.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="73" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +82,7 @@
       <file leaf-file-name="utils_test.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/credentials/utils_test.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+            <state line="7" column="2" selection-start="232" selection-end="294" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.93895346">
+            <state line="19" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,16 +118,25 @@
       <file leaf-file-name="roleSchema.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/credentials/roleSchema.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+            <state line="11" column="2" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.clj" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="roleSchema_test.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/credentials/roleSchema_test.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="3" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/credentials/utils.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.34593022">
               <folding />
             </state>
           </provider>
@@ -582,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/credentials/utils.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/credentials.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -624,30 +621,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/credentials/core_test.clj">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+        <state line="19" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/credentials/utils_test.clj">
+    <entry file="file://$PROJECT_DIR$/test/credentials/core_test.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="73" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/credentials/roleSchema.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+        <state line="11" column="2" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/test/credentials/utils_test.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.93895346">
+        <state line="7" column="2" selection-start="232" selection-end="294" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/credentials/roleSchema_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="3" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/credentials/utils.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.34593022">
           <folding />
         </state>
       </provider>
