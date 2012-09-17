@@ -10,6 +10,23 @@ Who knows, might be useful one day.
 
 /status - get status of the service.
 /ping - ping the service.
+/roles - roles that users can be in
+  POST - create a new role
+
+POST new role:
+
+{
+  "name":"name for the role"
+}
+
+response:
+
+{
+  "id":"role id",
+  "name":"name for the role"
+  "type": "role"
+  "status":201
+}
 
 ## License
 
