@@ -17,12 +17,14 @@
   ("status"))
 
 (defn notfound []
-  (str "notfound"))
+  {:status 404
+   :headers {"content-type" "application/json;charset=utf-8"}
+   :body (json-str {"status" 404 "message" "notfound"})})
 
 (defroutes myroutes
   (GET "/status" [] {:status 200 :body ("hello")})
   (GET "/ping" [] (ping))
-  (route/not-found {:status 404 :body (notfound)}))
+  (route/not-found (notfound)))
 
 (defn -main []
   (run-jetty #'myroutes
