@@ -3,7 +3,8 @@
         hiccup.core
         ring.adapter.jetty
         credentials.utils
-        [clojure.data.json :only (read-json json-str)])
+        [clojure.data.json :only (read-json json-str)]
+        [clojure.data.xml :only [element emit-str]])
   (:require [compojure.route :as route]
             [compojure.handler :as handler]))
 
@@ -26,7 +27,7 @@
 
 (defn status-xml []
   {:status 200
-   :body "status-xml"
+   :body (emit-str (element :status {:serviceName service-name :version (service-version) :success (service-status)}))
    :headers {"content-type" "application/xml;charset=utf-8"}})
 
 (defn status [params]

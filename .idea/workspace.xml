@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c8b72f2-8f1e-4d20-8368-add047aec0a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/credentials/core.clj" afterPath="$PROJECT_DIR$/src/credentials/core.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/credentials/utils.clj" afterPath="$PROJECT_DIR$/src/credentials/utils.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/credentials/web.clj" afterPath="$PROJECT_DIR$/src/credentials/web.clj" />
     </list>
     <ignored path="credentials.iws" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="project.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+            <state line="7" column="44" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,7 +91,7 @@
       <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/credentials/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="366" selection-end="366" vertical-scroll-proportion="0.46875">
+            <state line="6" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.1875">
               <folding />
             </state>
           </provider>
@@ -123,10 +122,10 @@
         <option value="$PROJECT_DIR$/test/credentials/core_test.clj" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/credentials/utils.clj" />
         <option value="$PROJECT_DIR$/src/credentials/core.clj" />
         <option value="$PROJECT_DIR$/src/credentials/web.clj" />
+        <option value="$PROJECT_DIR$/project.clj" />
       </list>
     </option>
   </component>
@@ -519,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/credentials/core.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
@@ -533,9 +525,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="44" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/credentials/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="366" selection-end="366" vertical-scroll-proportion="0.46875">
+        <state line="6" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.1875">
           <folding />
         </state>
       </provider>
