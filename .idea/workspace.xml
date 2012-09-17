@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c8b72f2-8f1e-4d20-8368-add047aec0a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/credentials/utils.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/credentials/utils.clj" afterPath="$PROJECT_DIR$/src/credentials/utils.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/credentials/web.clj" afterPath="$PROJECT_DIR$/src/credentials/web.clj" />
     </list>
     <ignored path="credentials.iws" />
@@ -92,7 +91,7 @@
       <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/credentials/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="41" selection-start="973" selection-end="973" vertical-scroll-proportion="0.56732494">
+            <state line="22" column="0" selection-start="591" selection-end="591" vertical-scroll-proportion="0.5798923">
               <folding />
             </state>
           </provider>
@@ -101,7 +100,7 @@
       <file leaf-file-name="utils.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/credentials/utils.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="57" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+            <state line="4" column="46" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -528,14 +527,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/credentials/utils.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+        <state line="4" column="46" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/credentials/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="41" selection-start="973" selection-end="973" vertical-scroll-proportion="0.56732494">
+        <state line="22" column="0" selection-start="591" selection-end="591" vertical-scroll-proportion="0.5798923">
           <folding />
         </state>
       </provider>

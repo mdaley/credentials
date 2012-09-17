@@ -3,7 +3,6 @@
         hiccup.core
         ring.adapter.jetty
         credentials.utils
-;        clojure.string
         [clojure.data.json :only (read-json json-str)])
   (:require [compojure.route :as route]
             [compojure.handler :as handler]))
@@ -12,20 +11,24 @@
   {:status 200
    :headers {"content-type" "text/plain;charset=utf-8"}})
 
-(defn status [params]
+(defn status-json []
   {:status 200
-   ;:body (if (= (params :format) "json") "true" "false")
-   :body (str "Hello " (get params "format" "notfound"))
-   })
+   :body "status-json"
+   :headers {"content-type" "application/json;charset=utf-8"}})
+
+(defn status-xml []
+  {:status 200
+   :body "status-xml"
+   :headers {"content-type" "application/xml;charset=utf-8"}})
+
+(defn status [params]
+  (if (= "json" (get params "format")) (status-json) (status-xml))
+  )
 
 (defn notfound []
   {:status 404
    :headers {"content-type" "application/json;charset=utf-8"}
    :body (json-str {"status" 404 "message" "notfound"})})
-
-;(defn lower-map [themap]
-;  (into {} (for [[k v] themap]
-;             [(lower-case (name k)) (lower-case v)])))
 
 (defroutes myroutes
   (GET "/status" {params :query-params} (status (credentials.utils/lower-map params)))
