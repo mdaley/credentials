@@ -5,16 +5,13 @@
         [clojure.data.json :only (read-json json-str)])
   (:require [compojure.route :as route]))
 
-(defn hello []
-  ;  (html [:h1 "Hello!"])
-  (json-str {"Hello" "world"})
-  )
-
 (defn ping []
-  (html [:h1 "ping"]))
+  {:status 200
+   :headers {"content-type" "text/plain;charset=utf-8"}})
 
-(defn status []
-  ("status"))
+(defn status [params]
+  {:status 200}
+  :body (pr-str params))
 
 (defn notfound []
   {:status 404
@@ -22,8 +19,9 @@
    :body (json-str {"status" 404 "message" "notfound"})})
 
 (defroutes myroutes
-  (GET "/status" [] {:status 200 :body ("hello")})
+  (GET "/status" {params :params} (status params))
   (GET "/ping" [] (ping))
+  (GET "/test" {params :params} (str "<h1>Hello World</h1>" (pr-str params)))
   (route/not-found (notfound)))
 
 (defn -main []
