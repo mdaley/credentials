@@ -47,33 +47,35 @@
 (defn validation-failure [failure]
   {:status 400
   :headers application-json
-  :body (json-str {"status" 400 "message" (str "bad request:" (generate-string failure))})})
+  :body (json-str {"status" 400 "message" (str "bad request: " (generate-string failure))})})
 
 (defn role-add-success [data]
   {:status 201
    :headers application-json
-   :body (generate-string data)}
-  )
-
-;(defn role-add [body]
-;  (let [data (parse-string(slurp body))]
-;   (println data)
-;  {:status 504 :body (generate-string data)})
-;  )
+   :body (generate-string data)})
 
 (defn role-add [body]
   (let [data (parse-string (slurp body) true)
         failure (validateRole data)]
-    (println (generate-string data))
-    (println (generate-string failure))
     (if (empty? failure) (role-add-success data) (validation-failure failure))
   )
 )
 
+(defn bad-header [header]
+  {:status 400
+   :headers application-json
+   :body (str "bad request: this resource only accepts content type: " header)})
+
+(defn accept-header [header incoming-header function]
+    (println incoming-header)
+    (if (= header incoming-header) function (bad-header header))
+  )
+
+
 (defroutes myroutes
   (GET "/status" {params :query-params} (status (lower-map params)))
   (GET "/ping" [] (ping))
-  (POST "/roles" {body :body} (role-add body))
+  (POST "/roles" {body :body content-type :content-type} (accept-header application-json content-type (role-add body)))
   (route/not-found (notfound)))
 
 (def myapp
