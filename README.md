@@ -16,14 +16,13 @@ Who knows, might be useful one day.
 POST new role:
 
 {
-  "name":"name for the role"
+  "id":"descriptive id for the role"
 }
 
 response:
 
 {
-  "id":"role id",
-  "name":"name for the role"
+  "id":"descriptive id of the role"
   "type": "role"
   "status":201
 }

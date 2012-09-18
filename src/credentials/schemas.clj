@@ -4,10 +4,12 @@
 (def role
   {:type "object"
    :properties {
-                 :id {:type "string" :optional true}
-                 :name {:type "string"}
-                 :type {:type "string" :default "role"}
-                 :status {:type "integer"}
+                 ; Descriptive id for the role
+                 :id {:type "string"}
+                 ; type of the object, use when the object is returned in service responses.
+                 :type {:type "string" :default "role" :optional true}
+                 ; status of the response, e.g. 201 when a role has just been created.
+                 :status {:type "integer" :optional true}
                }
   }
 )
