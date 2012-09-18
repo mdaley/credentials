@@ -1,9 +1,10 @@
 (ns credentials.web
   (:use compojure.core
         hiccup.core
-        cheshire.core
+        [cheshire.core :only (generate-string parse-string)]
         ring.adapter.jetty
         credentials.utils
+        credentials.schemas
         [clojure.data.json :only (read-json json-str)]
         [clojure.data.xml :only [element emit-str]])
   (:require [compojure.route :as route]
@@ -43,10 +44,31 @@
    :headers application-json
    :body (json-str {"status" 404 "message" "notfound"})})
 
-(defn role-add [body]
-  {:status 200
+(defn validation-failure [failure]
+  {:status 400
+  :headers application-json
+  :body (json-str {"status" 400 "message" (str "bad request:" (generate-string failure))})})
+
+(defn role-add-success [data]
+  {:status 201
    :headers application-json
-   :body (slurp body)})
+   :body (generate-string data)}
+  )
+
+;(defn role-add [body]
+;  (let [data (parse-string(slurp body))]
+;   (println data)
+;  {:status 504 :body (generate-string data)})
+;  )
+
+(defn role-add [body]
+  (let [data (parse-string (slurp body) true)
+        failure (validateRole data)]
+    (println (generate-string data))
+    (println (generate-string failure))
+    (if (empty? failure) (role-add-success data) (validation-failure failure))
+  )
+)
 
 (defroutes myroutes
   (GET "/status" {params :query-params} (status (lower-map params)))
