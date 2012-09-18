@@ -1,4 +1,4 @@
-(ns credentials.roleSchema-test
+(ns credentials.schemas-test
   (:use clojure.test
         credentials.core))
 

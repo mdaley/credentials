@@ -1,4 +1,4 @@
-(ns credentials.roleSchema
+(ns credentials.schemas
   (:use closchema.core :as schema))
 
 (def role
@@ -7,6 +7,9 @@
                  :id {:type "string"}
                  :name {:type "string"}
                  :type {:type "string" :default "role"}
-                 :status {:type "integer"}}})
+                 :status {:type "integer"}
+               }
+  }
+)
 
 (defn validateRole [data] (schema/report-errors (schema/validate role data)))
