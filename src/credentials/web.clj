@@ -6,7 +6,8 @@
         credentials.utils
         credentials.schemas
         [clojure.data.json :only (read-json json-str)]
-        [clojure.data.xml :only [element emit-str]])
+        [clojure.data.xml :only [element emit-str]]
+        [clojure.string :only (lower-case)])
   (:require [compojure.route :as route]
             [compojure.handler :as handler]))
 
@@ -68,14 +69,14 @@
 
 (defn accept-header [header incoming-header function]
     (println incoming-header)
-    (if (= header incoming-header) function (bad-header header))
+    (if (= header (lower-case (clojure.string/replace incoming-header #" " ""))) function (bad-header header))
   )
 
 
 (defroutes myroutes
   (GET "/status" {params :query-params} (status (lower-map params)))
   (GET "/ping" [] (ping))
-  (POST "/roles" {body :body content-type :content-type} (accept-header application-json content-type (role-add body)))
+  (POST "/roles" {body :body content-type :content-type} (accept-header "application/json;charset=utf-8" content-type (role-add body)))
   (route/not-found (notfound)))
 
 (def myapp
